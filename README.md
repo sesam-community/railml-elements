@@ -1,8 +1,5 @@
 # RailML element splitter
 
-To start the microservice:
-docker run -d --name railml-microservice -p 9290:5000 sesam/railml-microservice:latest
-
 ## How to configure
 
 ```json
