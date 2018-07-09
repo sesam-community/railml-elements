@@ -1,0 +1,4 @@
+Flask==0.11
+GitPython==2.1.8
+lxml==4.2.3
+xmltodict==0.11.0
