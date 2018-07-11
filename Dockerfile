@@ -5,6 +5,7 @@ COPY ./service /service
 
 RUN apk update
 RUN apk add python-dev libxml2-dev libxslt-dev py-lxml musl-dev gcc
+RUN apk add git
 
 RUN pip install --upgrade pip
 
