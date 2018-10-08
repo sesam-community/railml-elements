@@ -219,7 +219,7 @@ if __name__ == '__main__':
 #    json = to_json(outAsJson)
 #    print ("json:\n%s" % json)
 
-    with open("tmp_id_rsa", "w") as key_file:
+    with open("id_deployment_key", "w") as key_file:
         key_file.write(os.environ['SSH_PRIVATE_KEY'])
 
     app.run(debug=True, host='0.0.0.0')
