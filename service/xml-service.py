@@ -178,7 +178,7 @@ def get_entities(datatype):
 
 
 def sync_repo():
-    ssh_cmd = 'ssh -i id_deployment_key'
+    ssh_cmd = 'ssh -i /id_deployment_key'
     if not os.path.exists(working_dir):
         repo_url = os.environ['GIT_REPO']
         logger.info('cloning %s', repo_url)
@@ -221,5 +221,6 @@ if __name__ == '__main__':
 
     with open("id_deployment_key", "w") as key_file:
         key_file.write(os.environ['SSH_PRIVATE_KEY'])
+    os.chmod("/id_deployment_key", 0o600)
 
     app.run(debug=True, host='0.0.0.0')
