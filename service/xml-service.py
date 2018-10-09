@@ -178,7 +178,7 @@ def get_entities(datatype):
 
 
 def sync_repo():
-    ssh_cmd = 'ssh -i /id_deployment_key'
+    ssh_cmd = 'ssh -o "StrictHostKeyChecking=no" -i /id_deployment_key'
     if not os.path.exists(working_dir):
         repo_url = os.environ['GIT_REPO']
         logger.info('cloning %s', repo_url)
