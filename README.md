@@ -10,7 +10,7 @@
     "image": "[..]",
     "port": 5000,
     "environment": {
-      "GIT_URL": "git@github.com:datanav/railml-microservice.git",
+      "GIT_REPO": "git@github.com:datanav/railml-microservice.git",
       "FILE_PATTERN": "testfiles/*",
       "SSH_PRIVATE_KEY": "-----BEGIN RSA PRIVATE [..]"  
     }
