@@ -13,6 +13,7 @@ app = Flask(__name__)
 logger = logging.getLogger('service')
 working_dir = 'tmp_files'
 
+
 class readXML:
     def __init__(self):
         self._entities = {
@@ -35,17 +36,15 @@ class readXML:
                 "ocp": [],
                 "propOperational": [],
                 "geoCoord": [],
-                "trainDetector": [],
                 "switch": [],
                 "connection": [],
-                "crossSection": [],
                 "trackCircuitBorder": [],
                 "balise": [],
                 "crossing": []
                 }
 
-        self.resultList = [] # matched nodes from current source file
-        self.parentIdList = [] # parent nodes for the matched nodes
+        self.resultList = []  # matched nodes from current source file
+        self.parentIdList = []  # parent nodes for the matched nodes
         self.fileName = ""
 
     def get_entities(self, path, node):
@@ -115,6 +114,7 @@ class readXML:
 
 # ============================================================
 
+
 # removed @ from attribute names
 def remover(x):
     if isinstance(x, list):
@@ -131,6 +131,7 @@ def remover(x):
     else:
         return x
 
+
 def to_json(data):
     dumplist = []
     for k ,v in data.items():
@@ -138,6 +139,7 @@ def to_json(data):
             dumplist.append(l)
     dump = json.dumps(dumplist)
     return dump
+
 
 # ============================================================
 
